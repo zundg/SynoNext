@@ -1,0 +1,15 @@
+<!ENTITY menuitem.pasteurls.label "URL's einfügen">
+<!ENTITY menuitem.cleartasks.label "Tasks löschen">
+<!ENTITY menuitem.connect.label "Mit Disk Station verbinden">
+<!ENTITY menuitem.preferences.label "Einstellungen">
+
+<!ENTITY label.status.value "Status">
+<!ENTITY label.tasks.value "Tasks">
+
+<!ENTITY listheader.filename.label "Dateiname">
+<!ENTITY listheader.progress.label "Fortschritt">
+<!ENTITY listheader.speed.label "Tempo">
+<!ENTITY listheader.status.label "Status">
+
+<!ENTITY menuitem.context1.label "Zur Disk Station herunterladen">
+<!ENTITY menuitem.context2.label "URL's extrahieren und zur Disk Station herunterladen">

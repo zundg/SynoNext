@@ -1,0 +1,17 @@
+#SynoPanelTitle {
+	font-weight: bold;
+	text-decoration: underline;
+	padding-bottom: 0.5em;
+}
+
+#SynoConnectStatus {
+	color: red;
+}
+
+#SynoConnectStatus[state="online"] {
+	color: green;
+}
+
+listcell#filename {
+	padding-right: 2em;
+}

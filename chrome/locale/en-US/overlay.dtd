@@ -1,0 +1,15 @@
+<!ENTITY menuitem.pasteurls.label "Paste URL's">
+<!ENTITY menuitem.cleartasks.label "Clear tasks">
+<!ENTITY menuitem.connect.label "Connect to Disk Station">
+<!ENTITY menuitem.preferences.label "Preferences">
+
+<!ENTITY label.status.value "Status">
+<!ENTITY label.tasks.value "Tasks">
+
+<!ENTITY listheader.filename.label "Filename">
+<!ENTITY listheader.progress.label "Progress">
+<!ENTITY listheader.speed.label "Speed">
+<!ENTITY listheader.status.label "Status">
+
+<!ENTITY menuitem.context1.label "Download to Disk Station">
+<!ENTITY menuitem.context2.label "Extract URLs and download to Disk Station">

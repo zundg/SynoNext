@@ -1,0 +1,8 @@
+content   synonext                 chrome/content/
+skin      synonext   classic/1.0   chrome/skin/
+
+overlay   chrome://browser/content/browser.xul           chrome://synonext/content/overlay.xul
+style     chrome://global/content/customizeToolbar.xul   chrome://synonext/skin/toolbar.css
+
+locale    synonext   de-CH         chrome/locale/de-CH/
+locale    synonext   en-US         chrome/locale/en-US/

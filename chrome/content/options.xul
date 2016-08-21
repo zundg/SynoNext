@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://synonext/locale/options.dtd">
+ 
+<prefwindow id="SynoPrefWindow" title="SynoNext &window.title;"
+			xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+			onload="onLoad(event.target)"
+			onunload="onUnload(event.target)">
+ 
+	<prefpane id="SynoPrefPane">
+		<preferences>
+			<preference id="server" name="extensions.synonext.server" type="string"/>
+			<preference id="username" name="extensions.synonext.username" type="string"/>
+			<preference id="autologin" name="extensions.synonext.autologin" type="bool"/>
+		</preferences>
+		<groupbox id="ServerGroupBox">
+			<caption label="&groupbox.server.label;"/>
+			<vbox>
+				<label value="&label.url.value;:" control="server"/>
+				<textbox preference="server" id="server" width="300" flex="1"/>
+			</vbox>
+		</groupbox>
+		<groupbox id="AccountGroupBox">
+			<caption label="&groupbox.account.label;"/>
+			<vbox>
+				<label value="&label.username.value;:" control="user"/>
+				<textbox preference="username" id="username" flex="1"/>
+			</vbox>
+			<vbox>
+				<label value="&label.password.value;:" control="password"/>
+				<textbox id="password" type="password" flex="1"/>
+			</vbox>
+		</groupbox>
+		<groupbox id="MiscGroupBox">
+			<caption label="&groupbox.misc.label;"/>
+			<checkbox label="&label.autologin.value;" preference="autologin"/>
+		</groupbox>
+	</prefpane>
+	
+	<script type="application/x-javascript"
+			src="chrome://synonext/content/options.js" />
+
+</prefwindow>

@@ -1,0 +1,11 @@
+<!ENTITY window.title "Einstellungen">
+
+<!ENTITY groupbox.server.label "Server">
+<!ENTITY label.url.value "URL">
+
+<!ENTITY groupbox.account.label "Account">
+<!ENTITY label.username.value "Benutzername">
+<!ENTITY label.password.value "Passwort">
+
+<!ENTITY groupbox.misc.label "Verschiedenes">
+<!ENTITY label.autologin.value "Einloggen beim Starten des Browsers">

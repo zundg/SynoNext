@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://synonext/skin/overlay.css" type="text/css"?>
+<?xml-stylesheet href="chrome://synonext/skin/toolbar.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://synonext/locale/overlay.dtd">
+
+<overlay id="SynoOverlay"
+		 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+		 
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="SynoStringBundle"
+					  src="chrome://synonext/locale/strings.properties"/>
+	</stringbundleset>
+	
+	<script type="application/x-javascript"
+			src="chrome://synonext/content/overlay.js" />
+	<script type="application/x-javascript">
+		// register initialization callback
+		window.addEventListener("load", function() {		
+			// delayed startup for better firefox start times
+			window.setTimeout(function() {
+					synonext.load();
+				}, 555);
+		}, false);
+	</script>
+
+	<popupset>
+		<menupopup id="SynoStatusPopup"
+                   onpopupshowing="synonext.onStatusPopupShowing()">
+			<menuitem id="SynoPasteURL"
+					  label="&menuitem.pasteurls.label;"
+					  hidden="true"
+					  oncommand="synonext.pasteURL()"/>
+			<menuitem id="SynoClearItem"
+					  label="&menuitem.cleartasks.label;"
+					  hidden="true"
+					  oncommand="synonext.clearTasks()"/>
+			<menuitem id="SynoConnect"
+					  label="&menuitem.connect.label;"
+					  hidden="true"
+					  oncommand="synonext.startLogin()"/>
+			<menuseparator />
+			<menuitem id="SynoPreferences"
+					  label="&menuitem.preferences.label;"
+					  oncommand="synonext.preferencesDialog()"/>
+		</menupopup>
+		<panel id="SynoStatusPanel" type="arrow"
+			   onpopupshowing="synonext.populateTooltip()"
+			   onpopuphidden="synonext.onTooltipHidden()">
+			<vbox>
+				<label id="SynoPanelTitle" value="SynoNext"/>
+				<hbox>
+					<hbox flex="1">
+						<label value="&label.status.value;:"/>
+						<label id="SynoConnectStatus"/>
+					</hbox>
+					<hbox id="SynoTaskBox">
+						<label value="&label.tasks.value;:"/>
+						<label id="SynoTaskCount"/>
+					</hbox>
+				</hbox>
+				<listbox id="SynoTaskList">
+					<listhead>
+						<listheader label="&listheader.filename.label;"/>
+						<listheader label="&listheader.progress.label;" minwidth="90"/>
+						<listheader label="&listheader.speed.label;" minwidth="90"/>
+						<listheader label="&listheader.status.label;" minwidth="140"/>
+					</listhead>
+					<listcols>
+						<listcol/>
+						<listcol/>
+						<listcol/>
+						<listcol/>
+					</listcols>
+				</listbox>
+			</vbox>
+		</panel>
+	</popupset>
+	
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbarbutton class="toolbarbutton-1 chromeclass-toolbar-additional"
+                       label="SynoNext"
+                       id="SynoToolbarButton"
+                       popup="SynoStatusPanel"
+                       context="SynoStatusPopup">
+		</toolbarbutton>
+	</toolbarpalette>
+
+	<popup id="contentAreaContextMenu">
+		<menuitem id="SynoMenuItem1"
+				  label="&menuitem.context1.label;"
+				  hidden="true"
+				  oncommand="synonext.onMenuItem1()"/>
+		<menuitem id="SynoMenuItem2"
+				  label="&menuitem.context2.label;"
+				  hidden="true"
+				  oncommand="synonext.onMenuItem2()"/>
+	</popup>
+
+</overlay>
